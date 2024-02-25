@@ -24,7 +24,7 @@ public class ClienteRegistration {
     private Cliente mockCliente;
 
     @Given("el cliente proporciona detalle de sus datos validos al usuario que registra")
-    public void theUserProvidesValidAccountDetails() {
+    public void theUserProvidesValidCustomerDetails() {
         mockCliente = FeatureUtils.getMockCliente();
     }
 
@@ -34,7 +34,7 @@ public class ClienteRegistration {
     }
 
     @Then("el status code de la respuesta deberia ser {int}")
-    public void theResponseStatusCodeOfAccountRegistrationShouldBe(int statusCode) {
+    public void theResponseStatusCodeOfCustomerRegistrationShouldBe(int statusCode) {
         assertEquals(HttpStatusCode.valueOf(statusCode), response.getStatusCode());
     }
 
